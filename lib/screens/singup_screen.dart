@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:we_chat/them/colors.dart';
 
 class SingUpScreen extends StatelessWidget {
-  const SingUpScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+     
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -16,25 +17,23 @@ class SingUpScreen extends StatelessWidget {
               const Text(
                 'SingUp',
                 style: TextStyle(
+                  color: primaryColor,
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 15,),
-              const CircleAvatar(
+               CircleAvatar(
                 radius: 73,
-                backgroundColor: Colors.orange,
-                child: CircleAvatar(
-                  radius: 70,
-                  
-                ),
+                backgroundColor: primaryColor,
+                child: IconButton(onPressed: (){}, icon: const Icon(Icons.camera_alt,size: 40,)),
               ),
               const SizedBox(height: 40),
               const TextField(
                 decoration: InputDecoration(
-                  labelText: 'Email',
+                  labelText: 'Email',labelStyle: TextStyle(color: primaryColor),
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.email,color: secondaryColor,),
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -42,18 +41,18 @@ class SingUpScreen extends StatelessWidget {
               const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: 'Password',
+                  labelText: 'Password',labelStyle: TextStyle(color: primaryColor),
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: Icon(Icons.lock,color: secondaryColor,),
                 ),
               ),
                 const SizedBox(height: 20),
               const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: 'name',
+                  labelText: 'name',labelStyle: TextStyle(color: primaryColor),
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: Icon(Icons.lock,color: secondaryColor,),
                 ),
               ),
               
@@ -84,7 +83,7 @@ class SingUpScreen extends StatelessWidget {
                 onPressed: () {
               Navigator.pop(context);
                 },
-                child: const Text("already have an account? Login"),
+                child: const Text("already have an account? Login",style: TextStyle(color: secondaryColor),),
               ),
             ],
           ),

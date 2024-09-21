@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:we_chat/screens/forget_paassword_screen.dart';
 import 'package:we_chat/screens/singup_screen.dart';
+import 'package:we_chat/them/colors.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+       
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -17,6 +19,7 @@ class LoginScreen extends StatelessWidget {
               const Text(
                 'Login',
                 style: TextStyle(
+                  color: primaryColor,
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
@@ -24,9 +27,9 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 40),
               const TextField(
                 decoration: InputDecoration(
-                  labelText: 'Email',
+                  labelText: 'Email',labelStyle: TextStyle(color: primaryColor),
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.email,color: secondaryColor,),
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -34,9 +37,9 @@ class LoginScreen extends StatelessWidget {
               const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: 'Password',
+                  labelText: 'Password',labelStyle: TextStyle(color: primaryColor),
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: Icon(Icons.lock,color: secondaryColor,),
                 ),
               ),
               const SizedBox(height: 10),
@@ -45,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                 child: TextButton(
       
                   onPressed: () {
-                    // Add forgot password functionality here
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=> ForgetPaasswordScreen()));
                   },
                   child: const Text('Forgot Password?',style: TextStyle(color: Colors.orange),),
                 ),
@@ -74,9 +77,13 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>const SingUpScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SingUpScreen()));
                 },
-                child: const Text("Don't have an account? Sign up"),
+                child: const Text("Don't have an account? Sign up", style: TextStyle(
+                  color: secondaryColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),),
               ),
             ],
           ),

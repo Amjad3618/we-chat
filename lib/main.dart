@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:we_chat/screens/login_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'we chat ',
       theme: ThemeData(
         // iconButtonTheme: IconButtonThemeData(style: ButtonStyle(backgroundColor: Colors.orange) ),
         scaffoldBackgroundColor: Colors.black54,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    
         useMaterial3: true,
       ),
-      home: const LoginScreen());
+      home:  LoginScreen());
   }
 }
 
