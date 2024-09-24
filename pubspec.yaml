@@ -18,6 +18,10 @@ dependencies:
   lottie: ^3.1.2
   image_picker: ^0.8.7+3 # Updated version supporting null safety
   get: ^4.6.5 # Make sure GetX is the correct version with null safety
+  firebase_core: ^3.5.0
+  firebase_auth: ^5.3.0
+  firebase_storage: ^12.3.1
+  firebase_cloud_firestore: ^5.4.0
 
 dev_dependencies:
   flutter_test:

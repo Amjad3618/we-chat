@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:we_chat/them/colors.dart';
 
 class ForgetPaasswordScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class ForgetPaasswordScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Add login functionality here
+                 Get.back();
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,

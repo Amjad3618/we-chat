@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:we_chat/screens/forget_paassword_screen.dart';
 import 'package:we_chat/screens/singup_screen.dart';
 import 'package:we_chat/them/colors.dart';
@@ -48,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                 child: TextButton(
       
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=> ForgetPaasswordScreen()));
+                     Get.to(ForgetPaasswordScreen());
                   },
                   child: const Text('Forgot Password?',style: TextStyle(color: Colors.orange),),
                 ),
@@ -77,7 +78,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> SingUpScreen()));
+              Get.to(SingUpScreen());
                 },
                 child: const Text("Don't have an account? Sign up", style: TextStyle(
                   color: secondaryColor,
