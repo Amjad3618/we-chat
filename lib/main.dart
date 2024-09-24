@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:we_chat/screens/login_screen.dart';
+import 'package:we_chat/screens/homeScreen/home-screen.dart';
+
 
 void main() {
   runApp( MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     
         useMaterial3: true,
       ),
-      home:  LoginScreen());
+      home:  HomeScreen());
   }
 }
 

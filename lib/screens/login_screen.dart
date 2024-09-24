@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-              Get.to(SingUpScreen());
+              Get.to(SignUpScreen());
                 },
                 child: const Text("Don't have an account? Sign up", style: TextStyle(
                   color: secondaryColor,
